@@ -113,8 +113,8 @@ private:
 //  void NavdataCallback(const ardrone_autonomy::NavdataConstPtr& msg);
 
   ros::Time state_stamp;
-  math::Pose pose;
-  math::Vector3 euler, velocity, acceleration, angular_velocity;
+  ignition::math::Pose3d pose;
+  ignition::math::Vector3d euler, velocity, acceleration, angular_velocity;
 
   std::string link_name_;
   std::string namespace_;
@@ -156,7 +156,7 @@ private:
     PIDController velocity_z;
   } controllers_;
 
-  math::Vector3 inertia;
+  ignition::math::Vector3d inertia;
   double mass;
 
   /// \brief save last_time
